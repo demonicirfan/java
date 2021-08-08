@@ -7,7 +7,7 @@ public class printing {
         char c = 'A';
         String str = "Hello";
         System.out.println(a + b); // add
-        System.out.println(str + " my name is irfan"); // concat
+        System.out.println(str + c + " my name is irfan"); // concat
         System.out.println(x + y + " : adding"); // concat
         System.out.println("concatinating : " + x + y); // concat
         System.out.println("sum of " + x + " and " + y + " is " + (x + y)); // concat

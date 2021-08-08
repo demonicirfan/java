@@ -1,6 +1,5 @@
 package area;
 
-import java.lang.*;
 import java.util.Scanner;
 
 public class Area {
@@ -14,5 +13,6 @@ public class Area {
         area = base * height / 2;
 
         System.out.println("Area of the tringale is " + area);
+        sc.close();
     }
 }

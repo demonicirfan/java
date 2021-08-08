@@ -24,6 +24,7 @@ public class Roots {
         } else {
             System.out.println("Determinant less than 0, Roots are Imaginary");
         }
+        sc.close();
 
     }
 }

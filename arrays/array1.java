@@ -19,5 +19,8 @@ public class array1 {
         for (int j : B) {
             System.out.println(j);
         }
+
+        //this is also valid
+        int[] D= new int[5];
     }
 }

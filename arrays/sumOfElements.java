@@ -13,7 +13,7 @@ public class sumOfElements {
         int k = 8;
         for (int i = 0; i < A.length; i++) {
             if (A[i] == k) {
-                // System.out.println("element found at " + i);
+                System.out.println("element found at " + i);
                 System.exit(0);
             }
         }

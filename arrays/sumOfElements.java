@@ -3,7 +3,7 @@ package arrays;
 public class sumOfElements {
     public static void main(String[] args) {
         int A[] = { 3, 9, 7, 8, 12, 6, 15, 5, 4, 10 };
-       /* int sum = 0;
+        int sum = 0;
         for (int i = 0; i < A.length; i++) {
             sum = sum + A[i];
         }
@@ -18,7 +18,7 @@ public class sumOfElements {
             }
         }
         System.out.println("Not found");
-       */
+
         // finding maximum element
         int maxNum1 = 0;
         int maxNum2 = 0;

@@ -1,7 +1,5 @@
 package methods;
 
-import loops.forloop;
-
 public class passingArray {
     static void update(int A[]) {
         A[0] = 25;

@@ -21,6 +21,6 @@ public class array1 {
         }
 
         //this is also valid
-        int[] D= new int[5];
+        //int[] D= new int[5];
     }
 }

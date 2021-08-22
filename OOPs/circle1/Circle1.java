@@ -8,7 +8,10 @@ class Circle {
     }
 
     public void setRadius(double r) {
-        radius = r;
+        if (r >= 0)
+            radius = r;
+        else
+            radius = 0;
     }
 
     public double area() {

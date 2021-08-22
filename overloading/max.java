@@ -1,21 +1,20 @@
 package overloading;
 
 public class max {
-    static int maximum(int ...A) {
-        // a[] = 2,5,6,7,2
-        int key = 0;
+    static int maximum(int... A) {
+        if (A.length == 0)
+            return Integer.MIN_VALUE;
+        int maximum = A[0];
         for (int i = 1; i < A.length; i++) {
-            if (A[i] > A[i - 1]) {
-                key = A[i];
-            } else {
-                key = A[i - 1];
-            }
+            if (A[i] > maximum)
+                maximum = A[i];
+
         }
-        return key;
+        return maximum;
     }
 
     public static void main(String[] args) {
-        
-        System.out.println(maximum(new int[]{ 2, 5, 6, 7, 2, 88 }));
+
+        System.out.println(maximum(new int[] { 2, 5, 6, 7, 2, 88 }));
     }
 }

@@ -2,7 +2,7 @@ package methods;
 
 public class maxElement {
     static int maximum(int A[]) {
-        // a[] = 2,5,6,7,2
+        
         int key = 0;
         for (int i = 1; i < A.length; i++) {
             if (A[i] > A[i - 1]) {

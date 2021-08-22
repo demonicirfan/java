@@ -112,3 +112,97 @@ private int length;
 private int breadth;
 ```
 
+But we can only get these properties inside the class where they are declared then how to use them inside other classes. For that we use ```getProperty``` and ```setProperty``` methods.
+
+```java
+    public int getLength() {
+        return length;
+    }
+    public int getBreadth() {
+        return breadth;
+    }
+
+    public void setLength(int l) {
+        if (l >= 0)
+            length = l;
+        else
+            length = 0;
+    }
+    public void setBreadth(int b) {
+        if (b >= 0)
+            breadth = b;
+        else
+            breadth = 0;
+    }
+```
+
+Now use these methods inside some other class to get and set the properties.
+
+## Types of Properties
+
+- **Read & Writable** => The property where we have both get and set method that type of property can be modified as well as used.
+- **Read Only**  => The property which have only get method which will be used to read that property.
+- **Write Only**  => The property which have only set method which can be modified using set method but can not be used.
+
+```java
+
+ private int A; //read & write
+
+ public int setA( a = 4){
+     return A = a;
+ }
+
+ public int getA(){
+     return A ;
+ }
+
+private int B; // read only
+
+public int getB(){
+    return B;
+}
+
+private int C; //write only
+
+public int setC( c = 5){
+    returnC = c; 
+}
+// C may be used by some other method that is why we need to modify its value sometimes
+```
+
+## Constructors
+
+We want some methods which should initialize the properties at the time of construction of an object. Constructor is a method of a class which is automatically called whenever an object is created. Every class will have a default constructor assosciated with it which will be provided by java compiler. If we difine out own then the default one is removed.
+
+- Constructor will have the name same as class name. 
+- A construcotr will not have a return type.
+- Constucotr can be private of public.
+
+```java
+
+class Rectangle
+{
+    private int length;
+    private int breadth;
+
+    public Rectangle() //Non Parametrized Constructor
+    {
+        length = 1;
+        breadth = 1;
+    }
+
+    public Rectangle(int l, int b)  //Parametrized Constructor
+    {
+        length = l;
+        breadth = b;
+    }
+}
+
+static void main(...){
+    Rectangel r = new Rectangle();//first constructor will be called l and b will be set to 1
+
+    Rectangele R = new Rectangel (10, 5); //second constructor will be called and l - 10 b = 5
+}
+```
+
+> Note: There are two types of constructors Parametrized Constructor and Non Parametrized Constructor.

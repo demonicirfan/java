@@ -1,5 +1,3 @@
-package strings;
-
 public class strings {
     public static void main(String[] args) {
         String str1 = "java program"; // thsi is in string pool area

@@ -174,7 +174,7 @@ public int setC( c = 5){
 
 We want some methods which should initialize the properties at the time of construction of an object. Constructor is a method of a class which is automatically called whenever an object is created. Every class will have a default constructor assosciated with it which will be provided by java compiler. If we difine out own then the default one is removed.
 
-- Constructor will have the name same as class name. 
+- Constructor will have the name same as class name.
 - A construcotr will not have a return type.
 - Constucotr can be private of public.
 

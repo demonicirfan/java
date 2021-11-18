@@ -1,10 +1,10 @@
 public class wrapperClasses {
     public static void main(String[] args) {
-        final Student Irfan = new Student();
+        final StudentClass Irfan = new StudentClass();
     }
 }
 
-class Student {
+class StudentClass {
     int rollNumber;
     String name;
     int numOfSubjects;

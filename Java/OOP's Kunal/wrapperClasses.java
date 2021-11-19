@@ -14,7 +14,7 @@ class StudentClass {
     String name;
     int numOfSubjects;
 
-    static boolean addmission(boolean fees) {
+    boolean addmission(boolean fees) {
         if (fees == true) {
             return true;
         } else {

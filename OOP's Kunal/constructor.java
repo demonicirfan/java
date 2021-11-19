@@ -1,7 +1,8 @@
 public class constructor {
     public static void main(String[] args) {
         School school = new School();
-        System.out.println("Admission taken = " + school.takeAdmission("irfan"));
+        School publicSchool = new School(20, "public");
+        System.out.println(publicSchool.numOfClasses);
     }
 }
 
@@ -12,6 +13,11 @@ class School {
     boolean takeAdmission(String studentName) {
         boolean admissionTaken = true;
         return admissionTaken;
+    }
+
+    School(int num, String school) {
+        this.numOfClasses = num;
+        this.schoolName = school;
     }
 
     School() {

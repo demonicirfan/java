@@ -1,3 +1,8 @@
 {
-  "java.project.sourcePaths": ["strings", "arraylist", "String Builder"]
+  "java.project.sourcePaths": [
+    "strings",
+    "arraylist",
+    "String Builder",
+    "OOP's Kunal"
+  ]
 }

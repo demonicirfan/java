@@ -130,7 +130,6 @@ public class LinkedList {
         return node;
     }
 
-    // # ----------------Traversing linkedlist--------------
     Node find(int value) {
         Node node = head;
         while (node != null) {
@@ -141,6 +140,8 @@ public class LinkedList {
         }
         return null;
     }
+
+    // # ----------------Traversing linkedlist--------------
 
     public void display() {
         Node temp = head;

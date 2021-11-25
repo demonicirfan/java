@@ -1,6 +1,5 @@
 public class DoublyLinkedList {
     private Node head;
-    private Node tail;
     private int size;
 
     public DoublyLinkedList() {
@@ -37,15 +36,34 @@ public class DoublyLinkedList {
     }
 
     public void display() {
-        Node temp = head;
+        Node node = head;
+        Node last = null;
         System.out.print("HEAD <=> ");
 
-        while (temp != null) {
-            System.out.print(temp.val + " <=> ");
-            temp = temp.next;
+        while (node != null) {
+            System.out.print(node.val + " <==> ");
+            last = node;
+            node = node.next;
         }
         System.out.println("TAIL");
+        System.out.print("HEAD <=> ");
+        while (last != null) {
+            System.out.print(last.val + " <==> ");
+            last = last.prev;
+        }
+        System.out.println("Start");
 
+    }
+
+    Node find(int value) {
+        Node node = head;
+        while (node != null) {
+            if (node.value == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
     }
 
     // #------------- INSERTING AN ELEMENT-----------------
@@ -63,4 +81,38 @@ public class DoublyLinkedList {
         head = node;
     }
 
+    public void insertLast(int val) {
+        Node node = new Node(val); // creating the last node
+        Node last = head; // to traverse to the last array
+
+        node.next = null; // bcz it will be the last node its next should be null
+
+        if (head == null) { // if the head is null that means it is the only element or no element is there
+            node.prev = null; // prev = null and val = value
+            head = null; // head -> prev = null and val = value
+            return; // end
+        }
+        while (last.next != null) { // go to the last element
+            last = last.next;
+        }
+        last.next = node; // in last node store adress of new node
+        node.prev = last;// in new node prev store the address or last node
+
+    }
+
+    public void insertAt(int after, int val) {
+        Node p = find(after);
+
+        if (p == null) {
+            System.out.println("Does not exist");
+            return;
+        }
+        Node node = new Node(val);
+        node.next = p.next;
+        p.next = node;
+        node.prev = p;
+        if (node.next != null) {
+            node.next.prev = node;
+        }
+    }
 }

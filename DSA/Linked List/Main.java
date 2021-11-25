@@ -14,6 +14,7 @@ public class Main {
         dList.insertFirst(5);
         dList.insertFirst(6);
         dList.insertFirst(7);
+        dList.insertLast(4);
         dList.display();
 
     }

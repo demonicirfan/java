@@ -9,6 +9,13 @@ public class Main {
         list.display();
         list.insertAt(1, 3);
         list.display();
+        list.deleteFirst();
+        list.display();
+        list.insertLast(9);
+        list.display();
+        list.deleteLast();
+        list.delete(2); // delet index starts from 0
+        list.display();
 
     }
 }

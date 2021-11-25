@@ -65,10 +65,68 @@ public class LinkedList {
         for (int i = 1; i < position - 1; i++) {
             temp = temp.next;
         }
-        Node node = new Node(val);
-        node.next = temp.next;
+        Node node = new Node(val, temp.next);
         temp.next = node;
 
+    }
+
+    public int deleteFirst() {
+        int val = head.value;
+        head = head.next;
+        if (head == null) {
+            tail = null;
+        }
+        size--;
+        return val;
+
+    }
+
+    /*
+     * delete the last element of the node || a node reference is created called
+     * second last and then tail copies everything in secondlast node
+     */
+    public int deleteLast() {
+        if (size <= 1) {
+            return deleteFirst();
+        }
+        Node secondLast = get(size - 2);
+        int val = tail.value;
+
+        tail = secondLast;
+        tail.next = null;
+
+        return val;
+    }
+
+    /*
+     * Delete any node || we get the reference to previous node of the node we want
+     * to remove Now we change the value in prev.next to the node.next value inside
+     * the deleting node
+     */
+    public int delete(int index) {
+        index = index - 1;
+        if (index == 0) {
+            return deleteFirst();
+        }
+        if (index == size - 1) {
+            return deleteLast();
+        }
+        Node prev = get(index - 1);
+        int val = prev.next.value;
+
+        prev.next = prev.next.next;
+
+        return val;
+
+    }
+
+    // * this will give the reference to the node we want in the linkedlist
+    public Node get(int index) {
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
     }
 
     public void display() {

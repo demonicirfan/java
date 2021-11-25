@@ -8,6 +8,7 @@ public class LinkedList {
         this.size = 0;
     }
 
+    // # --------------------Inserting elements -------------------
     public void insertFirst(int val) {
         Node node = new Node(val);
         node.next = head;
@@ -70,6 +71,7 @@ public class LinkedList {
 
     }
 
+    // # --------------------Deleing elements -------------------
     public int deleteFirst() {
         int val = head.value;
         head = head.next;
@@ -104,7 +106,6 @@ public class LinkedList {
      * the deleting node
      */
     public int delete(int index) {
-        index = index - 1;
         if (index == 0) {
             return deleteFirst();
         }
@@ -129,6 +130,18 @@ public class LinkedList {
         return node;
     }
 
+    // # ----------------Traversing linkedlist--------------
+    Node find(int value) {
+        Node node = head;
+        while (node != null) {
+            if (node.value == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
     public void display() {
         Node temp = head;
         System.out.print("HEAD --> ");
@@ -145,6 +158,7 @@ public class LinkedList {
         System.out.println(size);
     }
 
+    // _ Node class
     private class Node {
         private int value;
         private Node next;

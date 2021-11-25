@@ -16,9 +16,19 @@ public class LL {
             tail = head;
         }
         size++;
+        System.out.println("head : " + head);
+        System.out.println("head.value : " + head.value);
+        System.out.println("head.next : " + head.next);
+        System.out.println("node : " + node);
+        System.out.println("node.value : " + node.value);
+        System.out.println("node.next : " + node.next);
+        System.out.println("tail : " + tail);
+        System.out.println("tail.value : " + tail.value);
+        System.out.println("tail.next : " + tail.next);
+        System.out.println("----------------------------------------------");
     }
 
-    public void addLast(int val) {
+    public void insertLast(int val) {
         Node node = new Node(val);
         node.next = null;
         if (size == 0) {
@@ -28,8 +38,16 @@ public class LL {
             tail = node; // tail arrow point to new node
         }
         size++;
-    }
-
+        System.out.println("head : " + head);
+        System.out.println("head.value : " + head.value);
+        System.out.println("head.next : " + head.next);
+        System.out.println("node : " + node);
+        System.out.println("node.value : " + node.value);
+        System.out.println("node.next : " + node.next);
+        System.out.println("tail : " + tail);
+        System.out.println("tail.value : " + tail.value);
+        System.out.println("tail.next : " + tail.next);
+        System.out.println("----------------------------------------------");
     }
 
     public void display() {

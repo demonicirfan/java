@@ -1,9 +1,3 @@
 {
-  "java.project.sourcePaths": [
-    "strings",
-    "arraylist",
-    "String Builder",
-    "OOP's Kunal",
-    "OOps"
-  ]
+  "java.project.sourcePaths": ["DSA/Linked List"]
 }

@@ -20,6 +20,6 @@ public class BoxPrice extends BoxWeight {
 
     public BoxPrice(double side, double weight, double cost) {
         super(side, weight);
-        this.cost = cost
+        this.cost = cost;
     }
 }

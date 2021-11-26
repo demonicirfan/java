@@ -11,7 +11,7 @@ public class ArrayQueue {
     }
 
     public void enqueue(int data) {
-        if (rear == capicity - 1) {
+        if (rear == capicity - 1) { // queue is full rear will be equal to capacity
             return;
         }
         rear++;
@@ -19,7 +19,7 @@ public class ArrayQueue {
     }
 
     public int dequeue() {
-        if (rear = -1) {
+        if (rear = -1) { // queue is empty
             return -1;
         }
         // element to deque is stored in result
@@ -66,7 +66,7 @@ public class CircilarArrayQueue {
     }
 
     public int dequeue() {
-        if (fornt == -1) {
+        if (fornt == -1) { // is
             return -1;
         }
         int result = a[front];

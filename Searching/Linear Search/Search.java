@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Search {
     public static void main(String[] args) {
         SearchInArray searchArray = new SearchInArray();
@@ -10,12 +12,22 @@ public class Search {
         System.out.println(searchString.existPosition(str, 'r'));
         System.out.println(searchString.existsOrNot(str, 'r'));
 
+        SearchIn2DArray searchIn2D = new SearchIn2DArray();
+        // @formatter:off
+        int[][] arr2D = { 
+          { 23, 4, 1 }, 
+          { 18, 12, 3, 9 }, 
+          { 78, 5, 6 }, 
+          { 13, 5, 88, 97, 0, 3 }, 
+        };
+        // @formatter:on
+        System.out.println(Arrays.toString(searchIn2D.existsPosition(arr2D, 5)));
+
     }
 
 }
 
 class SearchInString {
-    String name;
 
     boolean existsOrNot(String str, int target) {
         if (str.length() == 0) {
@@ -45,7 +57,6 @@ class SearchInString {
 }
 
 class SearchInArray {
-    int[] arr;
 
     boolean existsOrNot(int[] arr, int target) {
         if (arr.length == 0) {
@@ -72,6 +83,7 @@ class SearchInArray {
 
     }
 
+    // do not write in notebook
     int searchInRange(int[] arr, int target, int start, int end) {
         if (arr.length == 0) {
             return -1;
@@ -82,5 +94,19 @@ class SearchInArray {
             }
         }
         return -1;
+    }
+}
+
+class SearchIn2DArray {
+
+    int[] existsPosition(int[][] arr, int target) {
+        for (int row = 0; row < arr.length; row++) {
+            for (int col = 0; col < arr[row].length; col++) {
+                if (arr[row][col] == target) {
+                    return new int[] { row, col };
+                }
+            }
+        }
+        return new int[] { -1, -1 };
     }
 }

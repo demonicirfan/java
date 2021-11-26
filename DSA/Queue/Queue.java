@@ -70,7 +70,7 @@ public class CircilarArrayQueue {
             return -1;
         }
         int result = a[front];
-        if (front == rear) {
+        if (front == rear) { // only one element in queue
             front = rear = -1;
         } else {
             foront = (front + 1) % n;

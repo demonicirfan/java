@@ -1,3 +1,6 @@
 {
-  "java.project.sourcePaths": ["Searching/Linear Search"]
+  "java.project.sourcePaths": [
+    "Searching/Linear Search",
+    "Searching and Sorting/Sorting"
+  ]
 }

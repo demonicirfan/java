@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java/Coding.iml" filepath="$PROJECT_DIR$/Java/Coding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Coding1.iml" filepath="$PROJECT_DIR$/Coding1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DSA/DSA.iml" filepath="$PROJECT_DIR$/DSA/DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Searching and Sorting/Searching and Sorting.iml" filepath="$PROJECT_DIR$/Searching and Sorting/Searching and Sorting.iml" />
+    </modules>
+  </component>
+</project>

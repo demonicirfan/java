@@ -110,3 +110,24 @@ class SearchIn2DArray {
         return new int[] { -1, -1 };
     }
 }
+
+class LinearSearchWithReccurssion {
+    boolean LSwithRecurssion(int[] arr, int target, int index) {
+        if (index == arr.length) {
+            return false;
+        }
+        return arr[index] == target || LSwithRecurssion(arr, target, index+1)
+    }
+
+    int LSwithRecurssionIndex(int[] arr, int target, int index) {
+        if (index == arr.length) {
+            return -1;
+        }
+        if (arr[index] == target) {
+            return index;
+        }
+        else{
+            return LSwithRecurssion(arr, target, index+1)
+        }
+    }
+}

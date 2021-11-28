@@ -6,6 +6,8 @@ public class Sorting {
         SelectionSort ss = new SelectionSort();
         InsertionSort is = new InsertionSort();
         MergeSort ms = new MergeSort();
+        QuickSort qs = new QuickSort();
+
         int[] arr1 = { 3, 6, 2, 9, 8, 11, 4, 22, 7, 1, 43 };
         int[] arr2 = { 1, 23, 60, 200, 945, 1100 };
         int[] arr3 = { 8, 6 };
@@ -13,8 +15,8 @@ public class Sorting {
         // ss.selection(arr3);
         // bs.bubble(arr3);
         // is.insertion(arr3);
-        int[] arr4 = ms.mergeSort(arr2);
-        System.out.println(Arrays.toString(arr4));
+        qs.sort(arr1, 0, arr1.length - 1);
+        System.out.println(Arrays.toString(arr1));
     }
 }
 
@@ -141,8 +143,41 @@ class MergeSort {
         }
         return mix;
     }
+
 }
 
 class QuickSort {
+    void sort(int[] nums, int low, int hi) {
+        if (low >= hi) {
+            return;
+        }
 
+        int s = low;
+        int e = hi;
+        int m = s + (e - s) / 2;
+        int pivot = nums[m];
+
+        while (s <= e) {
+
+            // also a reason why if its already sorted it will not swap
+            while (nums[s] < pivot) {
+                s++;
+            }
+            while (nums[e] > pivot) {
+                e--;
+            }
+
+            if (s <= e) {
+                int temp = nums[s];
+                nums[s] = nums[e];
+                nums[e] = temp;
+                s++;
+                e--;
+            }
+        }
+
+        // now my pivot is at correct index, please sort two halves now
+        sort(nums, low, e);
+        sort(nums, s, hi);
+    }
 }

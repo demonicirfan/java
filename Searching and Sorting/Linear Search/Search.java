@@ -1,7 +1,9 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Search {
     public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
         SearchInArray searchArray = new SearchInArray();
         int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
         System.out.println(searchArray.existPosition(arr, 3));
@@ -22,7 +24,9 @@ public class Search {
         };
         // @formatter:on
         System.out.println(Arrays.toString(searchIn2D.existsPosition(arr2D, 5)));
-
+        LinearSearchWithReccurssion lSwithArr = new LinearSearchWithReccurssion();
+        int[] arr2 = { 1, 2, 3, 4, 4, 5 };
+        lSwithArr.LSwithRecurssionAllIndex(arr2, 4, 0, list);
     }
 
 }
@@ -132,5 +136,15 @@ class LinearSearchWithReccurssion {
         } else {
             return LSwithRecurssion(arr, target, index - 1);
         }
+    }
+
+    ArrayList LSwithRecurssionAllIndex(int[] arr, int target, int index, ArrayList<Integer> list) {
+        if (index == arr.length) {
+            return list;
+        }
+        if (arr[index] == target) {
+            list.add(index); // when the element is found add it to the array list
+        }
+        return LSwithRecurssion(arr, target, index - 1);
     }
 }

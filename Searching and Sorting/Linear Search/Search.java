@@ -113,21 +113,24 @@ class SearchIn2DArray {
 
 class LinearSearchWithReccurssion {
     boolean LSwithRecurssion(int[] arr, int target, int index) {
-        if (index == arr.length) {
+        // in every call we will check if the element we are searching for is equal to
+        // that index
+        if (index == arr.length) { // when we react end then return false
             return false;
         }
-        return arr[index] == target || LSwithRecurssion(arr, target, index+1)
+        // either the current element should be equal to the target or in the next
+        // reciurssion call
+        return arr[index] == target || LSwithRecurssion(arr, target, index + 1);
     }
 
     int LSwithRecurssionIndex(int[] arr, int target, int index) {
-        if (index == arr.length) {
+        if (index == -1) {
             return -1;
         }
         if (arr[index] == target) {
             return index;
-        }
-        else{
-            return LSwithRecurssion(arr, target, index+1)
+        } else {
+            return LSwithRecurssion(arr, target, index - 1);
         }
     }
 }

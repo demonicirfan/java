@@ -5,13 +5,16 @@ public class Sorting {
         BubbleSort bs = new BubbleSort();
         SelectionSort ss = new SelectionSort();
         InsertionSort is = new InsertionSort();
-        int[] arr1 = { 3, 6, 2, 9, 8, 11, 4, 22, 7, 1, 43, 0 };
+        MergeSort ms = new MergeSort();
+        int[] arr1 = { 3, 6, 2, 9, 8, 11, 4, 22, 7, 1, 43 };
         int[] arr2 = { 1, 23, 60, 200, 945, 1100 };
         int[] arr3 = { 8, 6 };
 
-        ss.selection(arr3);
-        bs.bubble(arr3);
-        is.insertion(arr3);
+        // ss.selection(arr3);
+        // bs.bubble(arr3);
+        // is.insertion(arr3);
+        int[] arr4 = ms.mergeSort(arr2);
+        System.out.println(Arrays.toString(arr4));
     }
 }
 
@@ -95,7 +98,49 @@ class CyclicSort {
 }
 
 class MergeSort {
+    // divide the array and sort then merge the arrays
+    int[] mergeSort(int[] arr) {
+        if (arr.length == 1) {
+            return arr;
+        }
+        int mid = arr.length / 2;
+        int[] left = mergeSort(Arrays.copyOfRange(arr, 0, mid)); // createing a new array and will return it back
+        int[] right = mergeSort(Arrays.copyOfRange(arr, mid, arr.length));
 
+        return merge(left, right);
+    }
+
+    private int[] merge(int[] first, int[] second) {
+        int[] mix = new int[first.length + second.length];
+
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (i < first.length && j < second.length) {
+            if (first[i] < second[j]) {
+                mix[k] = first[i];
+                i++;
+            } else {
+                mix[k] = second[j];
+                j++;
+            }
+            k++;
+        }
+        // it may be possible that one of the arrays is not complete
+        // copy the remaining elements
+        while (i < first.length) {
+            mix[k] = first[i];
+            i++;
+            k++;
+        }
+        while (j < second.length) {
+            mix[k] = second[j];
+            j++;
+            k++;
+        }
+        return mix;
+    }
 }
 
 class QuickSort {

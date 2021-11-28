@@ -145,6 +145,22 @@ class LinearSearchWithReccurssion {
         if (arr[index] == target) {
             list.add(index); // when the element is found add it to the array list
         }
-        return LSwithRecurssion(arr, target, index - 1);
+        return LSwithRecurssion(arr, target, index - 1, list);
+    }
+
+    ArrayList LSwithRecurssionAllIndex2(int[] arr, int target, int index) {
+        ArrayList<Integer> list = new ArrayList<>();
+        if (index == arr.length) {
+            return list;
+        }
+
+        // this will contain answer for that function call only
+        if (arr[index] == target) {
+            list.add(index);
+        }
+
+        ArrayList<Integer> ansFromBelowCalls = LSwithRecurssion2(arr, target, index + 1);
+        list.Add(ansFromBelowCalls);
+        return list;
     }
 }

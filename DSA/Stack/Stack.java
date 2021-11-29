@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import static java.lang.System.exit;
 
+// stack implementation using array
 public class Stack {
     int size;
     int arr[];
@@ -38,7 +40,7 @@ public class Stack {
         }
     }
 
-    public void pop(int element) {
+    public void pop() {
         if (!isEmpty()) {
             int returnedTop = top;
             top--;
@@ -49,7 +51,8 @@ public class Stack {
     }
 }
 
-public class ArrayListStack {
+// stack implementation using array list
+class ArrayListStack {
     ArrayList<Integer> arrayList = new ArrayList<>();
 
     public void push(int x) {
@@ -67,6 +70,7 @@ public class ArrayListStack {
     }
 }
 
+// stack implementation using LInkedlist
 class StackUsingLinkedlist {
 
     // A linked list node

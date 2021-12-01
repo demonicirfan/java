@@ -1,8 +1,9 @@
 {
   "java.project.sourcePaths": [
     "Searching and Sorting/Sorting",
+    "Exam",
     "DSA/Tree",
     "DSA/Stack",
-    "Exam"
+    "DSA/Queue"
   ]
 }

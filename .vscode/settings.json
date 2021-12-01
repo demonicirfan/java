@@ -4,6 +4,8 @@
     "Exam",
     "DSA/Tree",
     "DSA/Stack",
-    "DSA/Queue"
+    "DSA/Queue",
+    "DSA/InfixAndPostfix",
+    "DSA/Linked List"
   ]
 }
